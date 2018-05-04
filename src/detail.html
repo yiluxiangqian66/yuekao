@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts2/iconfont.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 375 * 100 + 'px';
+    </script>
+    <script>
+        window.onresize = function() {
+            document.location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <script id="tep" type="text/x-handlebars-template">
+        <dl>
+            <dt>
+                <img src="{{url}}">
+             </dt>
+            <dd>
+                <p class="tit">{{tit}}</p>
+                <p class="pic">￥{{pic}}</p>
+            </dd>
+        </dl>
+    </script>
+    <div class="box">
+        <header>
+            <a href="./index.html"> <i class="icon iconfont icon-xiangzuo"></i></a>
+            <span>
+                <button id="btn1">商品</button>
+                <button id="btn2">详情</button>
+            </span>
+            <div class="icon">
+                <a href="./index.html"><i class="icon iconfont icon-shouye"></i></a>
+                <i class="icon iconfont icon-fenxiang"></i>
+            </div>
+        </header>
+        <section>
+            <div class="content">
+            </div>
+        </section>
+    </div>
+</body>
+<script src="./js/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(['detail'])
+    })
+</script>
+
+</html>

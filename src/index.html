@@ -8,17 +8,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+        document.documentElement.style.fontSize = window.innerWidth / 375 * 100 + 'px';
     </script>
+    <link rel="stylesheet" href="fonts2/iconfont.css">
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.onresize = function() {
+            document.location.reload();
+        }
+    </script>
 </head>
 
 <body>
-    <div class="wrap "></div>
+    <div class="wrap">
+        <header>
+            <i class="icon iconfont icon-xiangzuo"></i>
+            <span>居家</span>
+            <i class="icon iconfont icon-fangdajing"></i>
+        </header>
+        <nav class="nav">
+            <ul class="navList">
+                <li class="active" data-type="chuang">床品件套</li>
+                <li data-type="beizhen">被枕</li>
+                <li>家具</li>
+                <li>收纳</li>
+                <li>布艺软装</li>
+                <li>家电</li>
+            </ul>
+        </nav>
+        <section>
+            <script id="tem" type="text/x-handlebars-template">
+                {{#each list}}
+                <a href="./detail.html?id={{id}}">
+                    <dl>
+                        <dt><img src="{{url}}" alt="">
+                            <p class="ms">{{ms}}</p>
+                        </dt>
+                        <dd>
+                            <p class="tit">{{tit}}</p>
+                            <p class="pic">￥{{pic}}</p>
+                        </dd>
+                    </dl>
+                </a>
+                {{/each}}
+
+            </script>
+            <div class="parent swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+
+                    </div>
+                    <div class="swiper-slide">被枕</div>
+                    <div class="swiper-slide">家具</div>
+                    <div class="swiper-slide">收纳</div>
+                    <div class="swiper-slide">布艺软装</div>
+                    <div class="swiper-slide">家电</div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 </body>
-<script src="js/require.js"></script>
+<script src="./js/require.js"></script>
 <script>
     require(['js/main.js'], function() {
         require(['index']);

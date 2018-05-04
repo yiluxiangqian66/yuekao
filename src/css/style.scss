@@ -12,3 +12,101 @@ body,
     width: 100%;
     height: 100%;
 }
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    font-size: .16rem;
+    header {
+        width: 100%;
+        height: .4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .18rem;
+        i.icon {
+            color: #7F7F7F;
+        }
+    }
+    nav {
+        width: 100%;
+        height: .5rem;
+        overflow: hidden;
+        .navList {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            li {
+                flex-shrink: 0;
+                padding: .05rem .2rem;
+                text-align: center;
+                &.active {
+                    color: #B52C31;
+                    border-bottom: 1px solid #B52C31;
+                }
+            }
+        }
+    }
+    section {
+        flex: 1;
+        overflow: hidden;
+        .parent {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            .swiper-wrapper {
+                .swiper-slide {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    a {
+                        width: 50%;
+                        text-align: center;
+                        padding: .02rem;
+                        dl {
+                            width: 100%;
+                            height: auto;
+                            dt {
+                                width: 1.64rem;
+                                height: 1.64rem;
+                                text-align: center;
+                                margin: 0 auto;
+                                img {
+                                    width: 100%;
+                                    height: 1.34rem;
+                                    display: block;
+                                }
+                                p.ms {
+                                    font-size: .12rem;
+                                    color: #B09E7B;
+                                    background: #F1ECE2;
+                                    height: .3rem;
+                                    line-height: .3rem;
+                                    text-align: left;
+                                    padding: 0 .05rem;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                }
+                            }
+                            dd {
+                                padding: 0 .1rem;
+                                .tit {
+                                    color: #333;
+                                    font-size: .14rem;
+                                    text-align: left;
+                                    line-height: 1.5;
+                                }
+                                .pic {
+                                    text-align: left;
+                                    color: #B52C31;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
